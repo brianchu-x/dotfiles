@@ -1,0 +1,11 @@
+# use Ctrl-t as screen's command key
+escape ^tt
+
+# note that Ctrl-o is easily confused with Ctrl-x o to switch screens
+# escape ^oo  
+
+
+# turn off visual bell
+vbell off   
+
+
