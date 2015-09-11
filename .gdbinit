@@ -1,3 +1,5 @@
+set auto-load safe-path /
+
 define aso
   file sbx
   attach $arg0
