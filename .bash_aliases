@@ -30,7 +30,7 @@ export GREP_OPTIONS='--color=auto'
 ulimit -c 70000 
 
 # ccache
-export CCACHE_DIR=/home/brianchu/tmp/ccc
+export CCACHE_DIR=/home/bchu/tmp/ccc
 
 # development
 alias s="amake all -DCOMPILE_SYS -DCOMPILE_ENV -f run"
@@ -41,12 +41,12 @@ alias q="isbx -c"
 alias qf="isbx -f"
 alias qfe="isbx -c \"set plan_nprint to 1\" -f"
 alias kx="killall -9 sbx sbx_go mongod"
-alias spike="sh /home/brianchu/asd/src/tools/spike.sh"
-# alias sbxtest="~/asd/src/tools/isbx_query.py -f"
+alias spike="sh /home/bchu/asd/source/tools/spike.sh"
+# alias sbxtest="~/asd/source/tools/isbx_query.py -f"
 
-alias qlog="isbx -f ~/asd/src/tools/qlog.rq"
-function qsum() { isbx -f ~/asd/src/tools/qsum.rq -set query=${1}; }
-function qcom() { isbx -f ~/asd/src/tools/qcompile.rq -set query=${1}; }
+alias qlog="isbx -f ~/asd/source/tools/qlog.rq"
+function qsum() { isbx -f ~/asd/source/tools/qsum.rq -set query=${1}; }
+function qcom() { isbx -f ~/asd/source/tools/qcompile.rq -set query=${1}; }
 
 # canonical postgres
 # alias qx="psql bchu -h 192.168.1.53 -p 5432 -U postgres -c"
@@ -67,9 +67,9 @@ function switch()
 
 # svn
 export SVN_EDITOR='emacs -nw'
-function svndiff () { svn diff --diff-cmd /usr/bin/diff -x "--minimal -w -U 3" $@ | colordiff | less -R -p" [0-9] @@"; }
-function ediff () { svn diff --diff-cmd /usr/bin/diff -x "--minimal -w -U 3" $@; }
-alias checkout="svn co https://sparqlrepo/svn/asd/trunk"
+# function svndiff () { svn diff --diff-cmd /usr/bin/diff -x "--minimal -w -U 3" $@ | colordiff | less -R -p" [0-9] @@"; }
+# function ediff () { svn diff --diff-cmd /usr/bin/diff -x "--minimal -w -U 3" $@; }
+# alias checkout="svn co https://sparqlrepo/svn/asd/trunk"
 
 # git
 alias gitlog='git --no-pager log --format=format:"------------------------------------------------%n%h | %an | %cd%n%n  %s%n%n%b%n"'
@@ -83,6 +83,6 @@ alias gitdiff='git --no-pager diff --ignore-space-at-eol -b -w'
 # source ~/dl/rational/purifyplus_setup.sh
 
 
-PATH=/usr/lib/ccache:$PATH:/sbin:/usr/sbin:$HOME/bin:$HOME/asd/drel/bin:$HOME/asd:$HOME/asd/src/tools:~/asd/drel/lib/clang/bin:.
+PATH=/usr/lib/ccache:$PATH:/sbin:/usr/sbin:$HOME/bin:$HOME/asd/bin:$HOME/asd:$HOME/asd/source/tools:.
 
 
