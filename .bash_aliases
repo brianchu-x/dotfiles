@@ -41,7 +41,7 @@ alias q="isbx -c"
 alias qf="isbx -f"
 alias qfe="isbx -c \"set plan_nprint to 1\" -f"
 alias kx="killall -9 sbx sbx_go mongod"
-alias spike="sh /home/bchu/asd/source/tools/spike.sh"
+alias spike="sh ~/asd/source/tools/spike.sh"
 # alias sbxtest="~/asd/source/tools/isbx_query.py -f"
 
 alias qlog="isbx -f ~/asd/source/tools/qlog.rq"
@@ -72,6 +72,7 @@ export SVN_EDITOR='emacs -nw'
 # alias checkout="svn co https://sparqlrepo/svn/asd/trunk"
 
 # git
+alias gitclone='git clone http://brianchu@dev.cambridgesemantics.com/stash/scm/sc/sparqlverse.git'
 alias gitlog='git --no-pager log --format=format:"------------------------------------------------%n%h | %an | %cd%n%n  %s%n%n%b%n"'
 alias gitsum='git --no-pager log --format="tformat:%h  %Cred%ci%Creset  %<(15)%an - %s"'
 alias gitdiff='git --no-pager diff --ignore-space-at-eol -b -w' 
