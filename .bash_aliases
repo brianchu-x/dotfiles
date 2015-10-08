@@ -76,6 +76,8 @@ alias gitclone='git clone http://brianchu@dev.cambridgesemantics.com/stash/scm/s
 alias gitlog='git --no-pager log --format=format:"------------------------------------------------%n%h | %an | %cd%n%n  %s%n%n%b%n"'
 alias gitsum='git --no-pager log --format="tformat:%h  %Cred%ci%Creset  %<(15)%an - %s"'
 alias gitdiff='git --no-pager diff --ignore-space-at-eol -b -w' 
+alias gitdiffx='git --no-pager diff'
+alias gitstash='git --no-pager stash'
 
 # testing
 
