@@ -1,3 +1,4 @@
+# override all security & always open a .gdbinit file 
 set auto-load safe-path /
 
 define aso
