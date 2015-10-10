@@ -78,6 +78,7 @@ alias gitsum='git --no-pager log --format="tformat:%h  %Cred%ci%Creset  %<(15)%a
 alias gitdiff='git --no-pager diff --ignore-space-at-eol -b -w' 
 alias gitdiffx='git --no-pager diff'
 alias gitstash='git --no-pager stash'
+alias gitshow='git --no-pager show'
 
 # testing
 
