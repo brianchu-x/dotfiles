@@ -255,7 +255,7 @@
 ;;(setq compile-command "jmake all")
 ;;(setq compile-command "amake all -DCOMPILE_SYS -DCOMPILE_ENV -src")
 ;;(setq compile-command "amake all -src")
-(setq compile-command "make all")
+(setq compile-command "cd ~/asd;make all")
 
 ;; There is a bug in emacs.  split horizontally to display vertically
 ;; (setq ediff-split-window-function 'split-window-horizontally)
