@@ -48,6 +48,7 @@ alias sbxtest="LD_LIBRARY_PATH=/home/bchu/asd/tools/lib:/home/bchu/asd/tools/lib
 alias qlog="isbx -f ~/asd/source/tools/qlog.rq"
 function qsum() { isbx -f ~/asd/source/tools/qsum.rq -set query=${1}; }
 function qcom() { isbx -f ~/asd/source/tools/qcompile.rq -set query=${1}; }
+function qexplain() { isbx -c "select * where { table 'sth_explain' filter(?query=${1})}"; }
 
 # canonical postgres
 # alias qx="psql bchu -h 192.168.1.53 -p 5432 -U postgres -c"
