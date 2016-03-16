@@ -249,13 +249,7 @@
 ;;---------------------------------------------------------------------------
 
 ;; compilation command
-;;(setq compile-command '("make -k -f $HOME/dev/Makefile"))
-;;(setq compile-command '("make -k"))
-;;(setq compile-command "amake padb")
-;;(setq compile-command "jmake all")
-;;(setq compile-command "amake all -DCOMPILE_SYS -DCOMPILE_ENV -src")
-;;(setq compile-command "amake all -src")
-(setq compile-command "cd ~/asd;make all")
+(setq compile-command "amake all")
 
 ;; There is a bug in emacs.  split horizontally to display vertically
 ;; (setq ediff-split-window-function 'split-window-horizontally)
