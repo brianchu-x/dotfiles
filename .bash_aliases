@@ -33,8 +33,9 @@ ulimit -c 70000
 export CCACHE_DIR=/home/bchu/tmp/ccc
 
 # development
-alias s="amake all -DCOMPILE_SYS -DCOMPILE_ENV -f run"
-alias rl="amake all -DCOMPILE_SYS -DCOMPILE_ENV -f run sp2b.loaded"
+alias s="amake all -f run"
+alias rl="amake all -f run sp2b.loaded"
+alias t="amake all -f run checkin"
 alias f="amake -grep"
 alias fp="amake -pgrep"
 alias q="isbx -c"
