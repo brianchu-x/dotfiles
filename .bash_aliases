@@ -35,7 +35,7 @@ export CCACHE_DIR=/home/bchu/tmp/ccc
 # development
 alias s="amake all -f run"
 alias rl="amake all -f run sp2b.loaded"
-alias t="amake all -f run checkin"
+alias t="time amake all -f run checkin"
 alias f="amake -grep"
 alias fp="amake -pgrep"
 alias q="isbx -c"
@@ -75,7 +75,7 @@ export SVN_EDITOR='emacs -nw'
 # alias checkout="svn co https://sparqlrepo/svn/asd/trunk"
 
 # git
-alias gitclone='git clone http://brianchu@dev.cambridgesemantics.com/stash/scm/sc/sparqlverse.git'
+function gitclone() { git clone /home/bchu/asd.origin ${1}; cd ${1}; git remote set-url origin http://brianchu@dev.cambridgesemantics.com/stash/scm/sc/sparqlverse.git; }
 alias gitlog='git --no-pager log --format=format:"------------------------------------------------%n%h | %an | %cd%n%n  %s%n%n%b%n"'
 alias gitsum='git --no-pager log --format="tformat:%h  %Cred%ci%Creset  %<(15)%an - %s"'
 alias gitdiff='git --no-pager diff --ignore-space-at-eol -b -w' 
