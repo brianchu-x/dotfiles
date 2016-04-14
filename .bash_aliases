@@ -30,7 +30,7 @@ export GREP_OPTIONS='--color=auto'
 ulimit -c 70000 
 
 # ccache
-export CCACHE_DIR=/home/bchu/tmp/ccc
+export CCACHE_DIR=$HOME/tmp/ccc
 
 # development
 alias s="amake all -f run"
@@ -44,7 +44,7 @@ alias qfe="isbx -c \"set plan_nprint to 1\" -f"
 alias kx="killall -9 sbx sbx_go mongod"
 alias spike="sh ~/asd/source/tools/spike.sh"
 # alias sbxtest="~/asd/source/tools/isbx_query.py -f"
-alias sbxtest="LD_LIBRARY_PATH=/home/bchu/asd/tools/lib:/home/bchu/asd/tools/lib64:$LD_LIBRARY_PATH ~/asd/source/tools/run_spq_vfy"
+alias sbxtest="LD_LIBRARY_PATH=$HOME/asd/tools/lib:$HOME/asd/tools/lib64:$LD_LIBRARY_PATH ~/asd/source/tools/run_spq_vfy"
 
 alias qlog="isbx -f ~/asd/source/tools/qlog.rq"
 function qsum() { isbx -f ~/asd/source/tools/qsum.rq -set query=${1}; }
@@ -75,7 +75,7 @@ export SVN_EDITOR='emacs -nw'
 # alias checkout="svn co https://sparqlrepo/svn/asd/trunk"
 
 # git
-function gitclone() { git clone /home/bchu/asd.origin ${1}; cd ${1}; git remote set-url origin http://brianchu@dev.cambridgesemantics.com/stash/scm/sc/sparqlverse.git; }
+function gitclone() { git clone $HOME/asd.origin ${1}; cd ${1}; git remote set-url origin http://brianchu@dev.cambridgesemantics.com/stash/scm/sc/sparqlverse.git; }
 alias gitlog='git --no-pager log --format=format:"------------------------------------------------%n%h | %an | %cd%n%n  %s%n%n%b%n"'
 alias gitsum='git --no-pager log --format="tformat:%h  %Cred%ci%Creset  %<(15)%an - %s"'
 alias gitdiff='git --no-pager diff --ignore-space-at-eol -b -w' 
