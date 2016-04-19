@@ -1,6 +1,7 @@
 # override all security & always open a .gdbinit file 
 set auto-load safe-path /
 
+# aliases
 define aso
   file sbx
   attach $arg0
@@ -60,3 +61,8 @@ define rdesc
   source ~/asd/source/tools/rowdesc.gdb
   dump_rowdesc $arg0
 end
+
+
+
+# output format
+set print pretty on
