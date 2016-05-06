@@ -44,7 +44,7 @@ alias qfe="isbx -c \"set plan_nprint to 1\" -f"
 alias kx="killall -9 sbx sbx_go mongod"
 alias spike="sh ~/asd/source/tools/spike.sh"
 # alias sbxtest="~/asd/source/tools/isbx_query.py -f"
-alias sbxtest="LD_LIBRARY_PATH=$HOME/asd/tools/lib:$HOME/asd/tools/lib64:$LD_LIBRARY_PATH ~/asd/source/tools/run_spq_vfy"
+alias sbxtest="LD_LIBRARY_PATH=$HOME/asd/tools/lib:$HOME/asd/tools/lib64:$LD_LIBRARY_PATH ~/asd/obj/tools/run_spq_vfy"
 
 alias qlog="isbx -f ~/asd/source/tools/qlog.rq"
 function qsum() { isbx -f ~/asd/source/tools/qsum.rq -set query=${1}; }
