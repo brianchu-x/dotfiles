@@ -2,44 +2,44 @@
 set auto-load safe-path /
 
 # aliases
-define aso
-  file sbx
-  attach $arg0
-  step
-  up
-  set XenSpin=0
-  next
-  next
-  finish
-end
-
-define axso
-  file sbx
-  attach $arg0
-  step
-  up
-  set XenSpin=0
-  next
-  next
-  finish
-  up
-  up
-  up
-end
-
-define asso
-  file sbx
-  attach $arg0
-  step
-  up
-  set XenSpin=0
-  next
-  next
-  finish
-  up
-  up
-  up
-end
+# define aso
+#   file sbx
+#   attach $arg0
+#   step
+#   up
+#   set XenSpin=0
+#   next
+#   next
+#   finish
+# end
+#
+# define axso
+#   file sbx
+#   attach $arg0
+#   step
+#   up
+#   set XenSpin=0
+#   next
+#   next
+#   finish
+#   up
+#   up
+#   up
+# end
+#
+# define asso
+#   file sbx
+#   attach $arg0
+#   step
+#   up
+#   set XenSpin=0
+#   next
+#   next
+#   finish
+#   up
+#   up
+#   up
+# end
 
 define bp
   if $argc >= 1
