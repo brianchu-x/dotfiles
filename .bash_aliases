@@ -82,6 +82,8 @@ alias gitdiff='git --no-pager diff --ignore-space-at-eol -b -w'
 alias gitdiffx='git --no-pager diff'
 alias gitstash='git --no-pager stash'
 alias gitshow='git --no-pager show'
+alias gitgraph='git --no-pager log --graph --oneline --decorate'
+
 
 # testing
 
