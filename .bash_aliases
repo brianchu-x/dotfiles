@@ -47,8 +47,8 @@ alias spike="sh ~/asd/source/tools/spike.sh"
 alias sbxtest="LD_LIBRARY_PATH=$HOME/asd/tools/lib:$HOME/asd/tools/lib64:$LD_LIBRARY_PATH ~/asd/obj/tools/run_spq_vfy"
 
 alias qlog="isbx -f ~/asd/source/tools/qlog.rq"
-function qsum() { isbx -f ~/asd/source/tools/qsum.rq -set query=${1}; }
-function qcom() { isbx -f ~/asd/source/tools/qcompile.rq -set query=${1}; }
+alias qsum="isbx -f ~/asd/source/tools/qsum.rq -arg"
+alias qcom="isbx -f ~/asd/source/tools/qcompile.rq -arg"
 function qexplain() { isbx -c "select * where { table 'sth_explain' filter(?query=${1})}"; }
 
 # canonical postgres
@@ -75,6 +75,7 @@ export SVN_EDITOR='emacs -nw'
 # alias checkout="svn co https://sparqlrepo/svn/asd/trunk"
 
 # git
+# alias gitclone='git clone http://brianchu@dev.cambridgesemantics.com/stash/scm/sc/sparqlverse.git'
 function gitclone() { git clone $HOME/asd.origin ${1}; cd ${1}; git remote set-url origin http://brianchu@dev.cambridgesemantics.com/stash/scm/sc/sparqlverse.git; }
 alias gitlog='git --no-pager log --format=format:"------------------------------------------------%n%h | %an | %cd%n%n  %s%n%n%b%n"'
 alias gitsum='git --no-pager log --format="tformat:%h  %Cred%ci%Creset  %<(15)%an - %s"'
