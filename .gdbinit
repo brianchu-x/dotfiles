@@ -58,7 +58,7 @@ Usage: bp <node1> [<node2> [<node3>]]
 end
 
 define rdesc
-  source ~/asd/source/tools/rowdesc.gdb
+  source ~/asd/source/devtools/sbxrowdesc.gdb
   dump_rowdesc $arg0
 end
 
