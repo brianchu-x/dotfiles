@@ -93,6 +93,6 @@ alias gitgraph='git --no-pager log --graph --oneline --decorate'
 # source ~/dl/rational/purifyplus_setup.sh
 
 
-PATH=$HOME/asd/tools/bin:/usr/lib/ccache:$PATH:/sbin:/usr/sbin:$HOME/bin:$HOME/asd/bin:$HOME/asd:$HOME/asd/source/tools:$HOME/asd/source/devtools:.
+PATH=$HOME/asd/tools/bin:/usr/lib/ccache:$PATH:/sbin:/usr/sbin:$HOME/bin:$HOME/asd/bin:$HOME/asd:$HOME/asd/source/tools:$HOME/asd/source/devtools:$HOME/asd/obj/tools:.
 
 
