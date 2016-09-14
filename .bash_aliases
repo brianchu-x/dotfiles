@@ -36,6 +36,7 @@ export CCACHE_DIR=$HOME/tmp/ccc
 alias s="amake all -f run"
 alias rl="amake all -f run sp2b.loaded"
 alias t="time amake all -f run checkin"
+alias cov="time amake -gcov all run checkin.gcov"
 alias f="amake -grep"
 alias fp="amake -pgrep"
 alias q="isbx -c"
