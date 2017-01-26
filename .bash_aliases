@@ -52,6 +52,10 @@ alias qsum="isbx -f ~/asd/source/xray/dr_qsum.rq -arg"
 alias qcom="isbx -f ~/asd/source/tools/qcompile.rq -arg"
 function qexplain() { isbx -c "select * where { table 'sth_explain' filter(?query=${1})}"; }
 
+# gcloud/gcesbx aliases
+alias gssh='ssh -oStrictHostKeyChecking=no -oUserKnownHostsFile=/dev/null'
+alias gscp='scp -oStrictHostKeyChecking=no -oUserKnownHostsFile=/dev/null'
+
 # canonical postgres
 # alias qx="psql bchu -h 192.168.1.53 -p 5432 -U postgres -c"
 # alias gengold="psql_query.py -d bchu -s 192.168.1.53 -p 5432 -u postgres -g -n -f"
