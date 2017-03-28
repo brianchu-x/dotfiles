@@ -43,7 +43,6 @@ alias q="isbx -c"
 alias qf="isbx -f"
 alias qfe="isbx -c \"set plan_nprint to 1\" -f"
 alias kx="killall -9 sbx sbx_go sbxmgrd sbx_compiled"
-alias spike="sh ~/asd/source/tools/spike.sh"
 # alias sbxtest="~/asd/source/tools/isbx_query.py -f"
 alias sbxtest="LD_LIBRARY_PATH=$HOME/asd/tools/lib:$HOME/asd/tools/lib64:$LD_LIBRARY_PATH ~/asd/obj/tools/run_spq_vfy"
 
@@ -51,6 +50,7 @@ alias qlog="isbx -f ~/asd/source/tools/qlog.rq"
 alias qsum="isbx -f ~/asd/source/xray/dr_qsum.rq -arg"
 alias qcom="isbx -f ~/asd/source/tools/qcompile.rq -arg"
 function qexplain() { isbx -c "select * where { table 'sth_explain' filter(?query=${1})}"; }
+function spike() { isbx -f ~/asd/source/tools/qspike.rq -set query=${1} -nohead -max_colwid 1000 > /tmp/spikeme.sh && chmod a+x /tmp/spikeme.sh && /tmp/spikeme.sh; }
 
 # gcloud/gcesbx aliases
 alias gssh='ssh -oStrictHostKeyChecking=no -oUserKnownHostsFile=/dev/null'
