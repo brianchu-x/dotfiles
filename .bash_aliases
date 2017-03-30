@@ -46,7 +46,7 @@ alias kx="killall -9 sbx sbx_go sbxmgrd sbx_compiled"
 # alias sbxtest="~/asd/source/tools/isbx_query.py -f"
 alias sbxtest="LD_LIBRARY_PATH=$HOME/asd/tools/lib:$HOME/asd/tools/lib64:$LD_LIBRARY_PATH ~/asd/obj/tools/run_spq_vfy"
 
-alias qlog="isbx -f ~/asd/source/tools/qlog.rq"
+alias qlog="isbx -f ~/asd/source/tools/qlog.rq -arg"
 alias qsum="isbx -f ~/asd/source/xray/dr_qsum.rq -arg"
 alias qcom="isbx -f ~/asd/source/tools/qcompile.rq -arg"
 function qexplain() { isbx -c "select * where { table 'sth_explain' filter(?query=${1})}"; }
