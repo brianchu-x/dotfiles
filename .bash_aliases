@@ -80,9 +80,9 @@ export SVN_EDITOR='emacs -nw'
 # alias checkout="svn co https://sparqlrepo/svn/asd/trunk"
 
 # git
-# alias gitclone='git clone http://brianchu@dev.cambridgesemantics.com/stash/scm/sc/sparqlverse.git'
-# function gitclone() { git clone $HOME/asd.origin ${1}; cd ${1}; git remote set-url origin http://brianchu@dev.cambridgesemantics.com/stash/scm/sc/sparqlverse.git; }
-function gitclone() { git clone $HOME/asd.origin ${1}; cd ${1}; git remote set-url origin ssh://git@dev.cambridgesemantics.com:7999/sc/sparqlverse.git; }
+# alias gitclone='git clone https://brianchu@bitbucket.cambridgesemantics.com/scm/sc/sparqlverse.git'
+# function gitclone() { git clone $HOME/asd.origin ${1}; cd ${1}; git remote set-url origin https://brianchu@bitbucket.cambridgesemantics.com/scm/sc/sparqlverse.git; }
+function gitclone() { git clone $HOME/asd.origin ${1}; cd ${1}; git remote set-url origin ssh://git@bitbucket.cambridgesemantics.com:7999/sc/sparqlverse.git; }
 
 alias gitlog='git --no-pager log --format=format:"------------------------------------------------%n%h | %an | %cd%n%n  %s%n%n%b%n"'
 alias gitsum='git --no-pager log --format="tformat:%h  %Cred%ci%Creset  %<(15)%an - %s"'
