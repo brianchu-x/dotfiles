@@ -46,6 +46,7 @@ alias kx="killall -9 sbx sbx_go sbxmgrd sbx_compiled"
 # alias sbxtest="~/asd/source/tools/isbx_query.py -f"
 alias sbxtest="LD_LIBRARY_PATH=$HOME/asd/tools/lib:$HOME/asd/tools/lib64:$LD_LIBRARY_PATH ~/asd/obj/tools/run_spq_vfy"
 alias tfx="tfd -DTF_KC_DIR=/kc/tfdata"
+alias gqectl="$HOME/csi-ansible/scripts/exec/gqectl"
 
 alias qlog="isbx -f ~/asd/source/tools/qlog.rq -arg"
 alias qsum="isbx -f ~/asd/source/xray/dr_qsum.rq -arg"
