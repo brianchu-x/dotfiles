@@ -33,8 +33,8 @@ ulimit -c 70000
 export CCACHE_DIR=$HOME/tmp/ccc
 
 # development
-alias s="amake all -f run"
-alias rl="amake all -f run sp2b.loaded"
+alias s="time amake all -f run"
+alias rl="time amake all -f run sp2b.loaded"
 alias t="time amake -o all -f run checkin"
 alias cov="time amake -gcov all run checkin.gcov"
 alias f="amake -grep"
