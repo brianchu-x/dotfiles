@@ -32,6 +32,9 @@ ulimit -c 70000
 # ccache
 export CCACHE_DIR=$HOME/tmp/ccc
 
+# java
+export JAVA_HOME=/usr/lib/jvm/java-7-openjdk-amd64
+
 # development
 alias s="time amake all -f run"
 alias rl="time amake all -f run sp2b.loaded"
