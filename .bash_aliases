@@ -33,7 +33,7 @@ ulimit -c 70000
 export CCACHE_DIR=$HOME/tmp/ccc
 
 # java
-export JAVA_HOME=/usr/lib/jvm/java-7-openjdk-amd64
+export JAVA_HOME=$HOME/asd/tools/jdk-11.0.1/
 
 # development
 alias s="time amake all -f run"
@@ -105,6 +105,6 @@ alias gitgraph='git --no-pager log --graph --oneline --decorate'
 # source ~/dl/rational/purifyplus_setup.sh
 
 
-PATH=$HOME/asd/tools/bin:/usr/lib/ccache:$PATH:/sbin:/usr/sbin:$HOME/bin:$HOME/asd/bin:$HOME/asd:$HOME/asd/source/tools:$HOME/asd/source/devtools:$HOME/asd/obj/tools:.
+PATH=$HOME/asd/tools/bin:/usr/lib/ccache:$PATH:/sbin:/usr/sbin:$HOME/bin:$HOME/asd/bin:$HOME/asd:$HOME/asd/source/tools:$HOME/asd/source/devtools:$HOME/asd/devtools:$HOME/asd/obj/tools:.
 
 
