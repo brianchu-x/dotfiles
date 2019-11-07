@@ -42,20 +42,21 @@ alias t="time amake -o all -f run checkin"
 alias cov="time amake -gcov all run checkin.gcov"
 alias f="amake -grep"
 alias fp="amake -pgrep"
-alias q="isbx -c"
-alias qf="isbx -f"
-alias qfe="isbx -c \"set plan_nprint to 1\" -f"
+alias q="azgi -c"
+alias qf="azgi -f"
+alias qfe="azgi -c \"set plan_nprint to 1\" -f"
 alias kx="killall -9 sbx sbx_go sbxmgrd sbx_compiled azg azg_go azgmgrd azgcompiled"
 # alias sbxtest="~/asd/source/tools/isbx_query.py -f"
 alias sbxtest="LD_LIBRARY_PATH=$HOME/asd/tools/lib:$HOME/asd/tools/lib64:$LD_LIBRARY_PATH ~/asd/obj/tools/run_spq_vfy"
 alias tfx="time tfd -DTF_KC_DIR=/kc/tfdata"
 alias gqectl="$HOME/csi-ansible/scripts/exec/gqectl"
+#alias format="format.sh $(git status | grep modified | awk '{ print $NF }')"
 
-alias qlog="isbx -f ~/asd/source/tools/qlog.rq -arg"
-alias qsum="isbx -f ~/asd/source/xray/dr_qsum.rq -arg"
-alias qcom="isbx -f ~/asd/source/tools/qcompile.rq -arg"
-function qexplain() { isbx -c "select * where { table 'sth_explain' filter(?query=${1})}"; }
-function spike() { isbx -f ~/asd/source/tools/qspike.rq -set query=${1} -nohead -max_colwid 1000 > /tmp/spikeme.sh && chmod a+x /tmp/spikeme.sh && /tmp/spikeme.sh; }
+alias qlog="azgi -f ~/asd/source/tools/qlog.rq -arg"
+alias qsum="azgi -f ~/asd/source/xray/dr_qsum.rq -arg"
+alias qcom="azgi -f ~/asd/source/tools/qcompile.rq -arg"
+function qexplain() { azgi -c "select * where { table 'sth_explain' filter(?query=${1})}"; }
+function spike() { azgi -f ~/asd/source/tools/qspike.rq -set query=${1} -nohead -max_colwid 1000 > /tmp/spikeme.sh && chmod a+x /tmp/spikeme.sh && /tmp/spikeme.sh; }
 
 # gcloud/gcesbx aliases
 alias gssh='ssh -oStrictHostKeyChecking=no -oUserKnownHostsFile=/dev/null'
@@ -106,5 +107,4 @@ alias gitgraph='git --no-pager log --graph --oneline --decorate'
 
 
 PATH=$HOME/asd/tools/bin:/usr/lib/ccache:$PATH:/sbin:/usr/sbin:$HOME/bin:$HOME/asd/bin:$HOME/asd:$HOME/asd/source/tools:$HOME/asd/source/devtools:$HOME/asd/devtools:$HOME/asd/obj/tools:.
-
 
