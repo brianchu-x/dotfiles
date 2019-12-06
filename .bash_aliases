@@ -100,6 +100,7 @@ alias gitgraph='git --no-pager log --graph --oneline --decorate'
 
 
 # testing
+export AMCC_DEVELOPER=1
 
 
 # Purify
