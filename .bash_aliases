@@ -36,20 +36,20 @@ export CCACHE_DIR=$HOME/tmp/ccc
 export JAVA_HOME=$HOME/asd/tools/jdk-11.0.1/
 
 # development
-alias s="time amake all -f run"
-alias rl="time amake all -f run sp2b.loaded"
-alias t="time amake -o all -f run checkin"
+alias s="time amake -o run"
+alias rl="time amake -o run sp2b.loaded"
+alias t="time amake -o run checkin"
 alias cov="time amake -gcov all run checkin.gcov"
-alias f="amake -grep"
-alias fp="amake -pgrep"
+alias f="amake -o -grep"
+alias fp="amake -o -pgrep"
 alias q="azgi -c"
 alias qf="azgi -f"
 alias qfe="azgi -c \"set plan_nprint to 1\" -f"
 alias kx="killall -9 sbx sbx_go sbxmgrd sbx_compiled azg azg_go azgmgrd azgcompiled"
 # alias sbxtest="~/asd/source/tools/isbx_query.py -f"
-alias sbxtest="LD_LIBRARY_PATH=$HOME/asd/tools/lib:$HOME/asd/tools/lib64:$LD_LIBRARY_PATH ~/asd/obj/tools/run_spq_vfy"
+# alias sbxtest="LD_LIBRARY_PATH=$HOME/asd/tools/lib:$HOME/asd/tools/lib64:$LD_LIBRARY_PATH ~/asd/obj/tools/run_spq_vfy"
 alias tfx="time tfd -DTF_KC_DIR=/kc/tfdata"
-alias gqectl="$HOME/csi-ansible/scripts/exec/gqectl"
+# alias gqectl="$HOME/csi-ansible/scripts/exec/gqectl"
 #alias format="format.sh $(git status | grep modified | awk '{ print $NF }')"
 
 alias qlog="azgi -f ~/asd/source/tools/qlog.rq -arg"
@@ -80,7 +80,7 @@ function switch()
 }
 
 # svn
-export SVN_EDITOR='emacs -nw'
+# export SVN_EDITOR='emacs -nw'
 # function svndiff () { svn diff --diff-cmd /usr/bin/diff -x "--minimal -w -U 3" $@ | colordiff | less -R -p" [0-9] @@"; }
 # function ediff () { svn diff --diff-cmd /usr/bin/diff -x "--minimal -w -U 3" $@; }
 # alias checkout="svn co https://sparqlrepo/svn/asd/trunk"
