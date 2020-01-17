@@ -101,6 +101,7 @@ alias gitgraph='git --no-pager log --graph --oneline --decorate'
 
 # testing
 export AMCC_DEVELOPER=1
+export USER_CONFIG=$HOME/asd/settings.txt
 
 
 # Purify
