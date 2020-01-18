@@ -249,7 +249,7 @@
 ;;---------------------------------------------------------------------------
 
 ;; compilation command
-(setq compile-command "amake all")
+(setq compile-command "amake -o all")
 
 ;; There is a bug in emacs.  split horizontally to display vertically
 ;; (setq ediff-split-window-function 'split-window-horizontally)
