@@ -10,6 +10,7 @@ fi
 
 # set up common aliases
 alias la="ls -al"
+alias ll="ls -l"
 alias lsd="ls -alhd"
 
 # set up prompt
