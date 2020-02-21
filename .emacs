@@ -210,9 +210,13 @@
 ;;(fset 'shells
 ;;   "\C-[xshell\C-m\C-[xrename-buff\C-m1\C-m\C-[xshell\C-m\C-[xrename-buff\C-m2\C-m\C-[xshell\C-m\C-[xrename-buff\C-m3\C-m")
 
-;; add syntax highlighting to the shell
+;; add syntax highlighting to the shell (Linux)
 (fset 'hi-lock-shell
    "\C-[shl^+.*\C-m\C-kblue-b\C-m\C-[shr^-.*\C-m\C-kred\C-m")
+
+;; add syntax highlighting to the shell (MacOS)
+;; (fset 'hi-lock-shell
+;;   "\C-[shl^+.*\C-mhi-blue-b\C-m\C-[shr^-.*\C-mhi-red\C-m")
 
 (fset 'shell1
    "\C-[xshell\C-m\C-[xrename-buffer\C-m1\C-m\C-[xhi-lock-mode\C-m\C-[xhi-lock-shell\C-m")
