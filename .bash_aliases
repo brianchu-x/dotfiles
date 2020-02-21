@@ -35,6 +35,7 @@ export CCACHE_DIR=$HOME/tmp/ccc
 
 # java
 export JAVA_HOME=$HOME/asd/tools/jdk-11.0.1/
+# export JAVA_HOME=/opt/local/jdk-11.0.1.jdk/Contents/Home
 
 # development
 alias s="time amake -o run"
@@ -109,5 +110,5 @@ export USER_CONFIG=$HOME/asd/settings.txt
 # source ~/dl/rational/purifyplus_setup.sh
 
 
-PATH=$HOME/asd/tools/bin:/usr/lib/ccache:$PATH:/sbin:/usr/sbin:$HOME/bin:$HOME/asd/bin:$HOME/asd:$HOME/asd/source/tools:$HOME/asd/source/devtools:$HOME/asd/devtools:$HOME/asd/obj/tools:.
+PATH=$HOME/asd/tools/bin:/usr/lib/ccache:$PATH:/usr/local/bin:/usr/bin:/bin:/sbin:/usr/sbin:$HOME/bin:$HOME/asd/bin:$HOME/asd:$HOME/asd/source/tools:$HOME/asd/source/devtools:$HOME/asd/devtools:$HOME/asd/obj/tools:.
 
