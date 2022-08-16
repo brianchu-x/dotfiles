@@ -59,7 +59,7 @@ alias qlog="azgi -f ~/asd/source/tools/qlog.rq -arg"
 alias qsum="azgi -f ~/asd/source/xray/dr_qsum.rq -arg"
 alias qcom="azgi -f ~/asd/source/tools/qcompile.rq -arg"
 function qexplain() { azgi -c "select * where { table 'sth_explain' filter(?query=${1})}"; }
-function spike() { azgi -f ~/asd/source/tools/qspike.rq -arg $HOME/asd/internal.0 -arg query=${1} -nohead -max_colwid 1000 > /tmp/spikeme.sh && chmod a+x /tmp/spikeme.sh && /tmp/spikeme.sh; }
+function spike() { azgi -f ~/asd/source/tools/qspike.rq -arg $HOME/asd/internal.0 -arg ${1} -nohead -max_colwid 1000 > /tmp/spikeme.sh && chmod a+x /tmp/spikeme.sh && /tmp/spikeme.sh; }
 
 # gcloud/gcesbx aliases
 alias gssh='ssh -oStrictHostKeyChecking=no -oUserKnownHostsFile=/dev/null'
