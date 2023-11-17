@@ -36,7 +36,11 @@ export CCACHE_DIR=$HOME/tmp/ccc
 # java
 # export JAVA_HOME=$HOME/asd/tools/jdk-11.0.1/
 # export JAVA_HOME=/opt/local/jdk-11.0.1.jdk/Contents/Home
+# export JAVA_HOME=/opt/local/jdk-11.0.1
 unset JAVA_HOME
+
+# MacOS Toolchain
+export MACOSX_DEPLOYMENT_TARGET=12.6
 
 # development
 alias s="time amake -o run"
