@@ -43,12 +43,14 @@ unset JAVA_HOME
 export MACOSX_DEPLOYMENT_TARGET=12.6
 
 # development
-alias s="time amake -o run"
-alias rl="time amake -o run sp2b.loaded"
-alias t="time amake -o run checkin"
-alias cov="time amake -gcov all run checkin.gcov"
-alias f="amake -o -grep"
-alias fp="amake -o -pgrep"
+alias a="time amake -DAMCC_DEBUG=1"
+alias ao="time amake -o -DAMCC_DEBUG=1"
+alias s="time amake -o -DAMCC_DEBUG=1 run"
+alias rl="time amake -o -DAMCC_DEBUG=1 run sp2b.loaded"
+alias t="time amake -o -DAMCC_DEBUG=1 run checkin"
+alias cov="time amake -gcov -DAMCC_DEBUG=1 all run checkin.gcov"
+alias f="amake -o -DAMCC_DEBUG=1 -grep"
+alias fp="amake -o -DAMCC_DEBUG=1 -pgrep"
 alias q="azgi -c"
 alias qf="azgi -f"
 alias qfe="azgi -c \"set plan_nprint to 1\" -f"
