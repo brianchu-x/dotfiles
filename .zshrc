@@ -3,6 +3,7 @@ export MAVEN_HOME=/opt/apache-maven-3.9.7
 
 export CC=$(which clang)                         # ...for CMake
 export CXX=$(which clang++)                      # ...for CMake
+export CCACHE_DIR=${HOME}/tmp/ccc                # ...for ccache
 export PATH=/opt/local/bin:/opt/local/sbin:$PATH # ...for MacPorts
 export PATH=${JAVA_HOME}/bin:$PATH               # ...for GraalVM
 export PATH=${MAVEN_HOME}/bin:$PATH              # ...for Maven
@@ -13,11 +14,9 @@ export PATH=${AZG_HOME}/bin:$PATH                # ...for AnzoGraph
 export PATH=${AZG_HOME}/devtools:$PATH           # ...for AnzoGraph
 export PATH=${AZG_HOME}/tools/bin:$PATH          # ...for AnzoGraph
 export PATH=.:$PATH                              # ...for cwd
-
 export USER_CONFIG=${AZG_HOME}/settings.txt      # ...for config
-# export CCACHE_DIR=${HOME}/tmp/ccc              # ...for ccache
 
-# export PS1="[\h:\w \j]\$ "                     # ...display prompt
+export PS1="[%~ %j %?]\$ "                       # ...display prompt
 export GREP_OPTIONS='--color=auto'               # ...grep highlighting
 
 alias ll="ls -l"
@@ -45,8 +44,6 @@ alias qfe="azgi -c \"set plan_nprint to 1\" -f"
 alias kx="killall -9 azg azg_go azgmgrd"
 alias tfx="time tfd -DTF_KC_DIR=/kc/tfdata"
 
-function spike() { azgi -f ${AZG_HOME}/source/tools/qspike.rq -arg ${AZG_HOME}/internal.0 -arg ${1} -nohead -max_colwid 1000 > /tmp/spikeme.sh && chmod a+x /tmp/spikeme.sh && /tmp/spikeme.sh; }
-
 # alias gitclone='git clone ssh://bitbucket.cambridgesemantics.com:7999/sc/sparqlverse.git'
 function gitclone() { git clone ${HOME}/asd.origin ${1}; cd ${1}; git remote set-url origin ssh://git@bitbucket.cambridgesemantics.com:7999/sc/sparqlverse.git; }
 
@@ -57,3 +54,7 @@ alias gitdiffx='git --no-pager diff'
 alias gitstash='git --no-pager stash'
 alias gitshow='git --no-pager show'
 alias gitgraph='git --no-pager log --graph --oneline --decorate'
+
+alias mntkc="sudo mount -o nolocks -t nfs 10.102.0.56:/kc /opt/kc"
+
+function spike() { azgi -f ${AZG_HOME}/source/tools/qspike.rq -arg ${AZG_HOME}/internal.0 -arg ${1} -nohead -max_colwid 1000 > /tmp/spikeme.sh && chmod a+x /tmp/spikeme.sh && /tmp/spikeme.sh; }
