@@ -1,0 +1,11 @@
+1. Install Xcode development tools from the App Store
+2. Run "xcode-select --install" in a terminal
+3. Run "git --version" to verify git is installed
+4. Run "ssh-keygen -t xxx" Generate an ssh key
+5. Download and install MacPorts from https://www.macports.org/install.php
+6. Run "sudo port selfupdate"
+7. Run "sudo port install bison cmake clang-17"
+8. Run "sudo port select clang mp-clang-17"
+9. Run "clang --version" to verify the compiler version
+10. Checkout dotfiles repo from GitHub
+11. copy .zshrc to $HOME directory.
